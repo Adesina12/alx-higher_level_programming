@@ -1,3 +1,3 @@
-name = "Battery street"
-mymy = number + name
-print(mymy)
+#!/usr/bin/python3
+number = 98
+print(f"{number} Battery street")
