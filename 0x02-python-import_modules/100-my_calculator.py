@@ -10,11 +10,6 @@ if __name__ == "__main__":
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
-
-    """if out[2] != '+' and out[2] != '-' and out[2] != '*' and out[2] != '/':
-        sys.stderr.write("Unknown operator. Available operators: +, -, * and /\n")
-        sys.exit(1)"""
-    
     a = int(out[1])
     b = int(out[3])
 
@@ -25,7 +20,7 @@ if __name__ == "__main__":
 
     if out[2] == '+':
         print("{} + {} = {}".format((a), (b), add))
-        
+
     elif out[2] == '-':
         print("{} - {} = {}".format((a), (b), sub))
     elif out[2] == '*':
