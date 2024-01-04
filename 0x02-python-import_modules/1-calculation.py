@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import calculator_1
+    from calculator_1 import add, sub, mul, div
     a = 10
     b = 5
-    add = calculator_1.add(a, b)
-    sub = calculator_1.sub(a, b)
-    mul = calculator_1.mul(a, b)
-    div = calculator_1.div(a, b)
+    add = add(a, b)
+    sub = sub(a, b)
+    mul = mul(a, b)
+    div = div(a, b)
 
     print("{} + {} = {}".format(a, b, add))
     print("{} - {} = {}".format(a, b, sub))
