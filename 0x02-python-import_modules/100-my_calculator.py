@@ -7,8 +7,8 @@ if __name__ == "__main__":
     outLen = len(sys.argv)
 
     if outLen < 4:
-        sys.stderr.write("Usage: ./100-my_calculator.py <a> <operator> <b>\n")
-        sys.exit (1)
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        exit(1)
 
 
     """if out[2] != '+' and out[2] != '-' and out[2] != '*' and out[2] != '/':
@@ -33,5 +33,5 @@ if __name__ == "__main__":
     elif out[2] == '/':
         print("{} / {} = {}".format((a), (b), div))
     else:
-        sys.stderr.write("Unknown operator. Available operators: +, -, * and /\n")
-        sys.exit(1)
+        print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
