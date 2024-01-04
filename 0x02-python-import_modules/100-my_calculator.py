@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
-    import calculator_1
+    from calculator_1 import add, sub, mul, div
 
     out = sys.argv
     outLen = len(sys.argv)
@@ -18,13 +18,14 @@ if __name__ == "__main__":
     a = int(out[1])
     b = int(out[3])
 
-    add = calculator_1.add(a, b)
-    sub = calculator_1.sub(a, b)
-    mul = calculator_1.mul(a, b)
-    div = calculator_1.div(a, b)
+    add = add(a, b)
+    sub = sub(a, b)
+    mul = mul(a, b)
+    div = div(a, b)
 
     if out[2] == '+':
         print("{} + {} = {}".format((a), (b), add))
+        
     elif out[2] == '-':
         print("{} - {} = {}".format((a), (b), sub))
     elif out[2] == '*':
