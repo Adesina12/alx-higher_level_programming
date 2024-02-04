@@ -1,0 +1,46 @@
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, 5, 6]
+... ]
+>>> print(matrix_divided(matrix, 3))
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+>>> print(matrix)
+[[1, 2, 3], [4, 5, 6]]
+>>> matrix = [[3, 9], [12, 15, 3]]
+>>> print(matrix_divided(matrix, 2))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/adesina/Documents/alx-software_engineering/daadesina1/alx-higher_level_programming/0x07-python-test_driven_development/2-matrix_divided.py", line 18, in matrix_divided
+    raise TypeError('Each row of the matrix must have the same size')
+TypeError: Each row of the matrix must have the same size
+>>> matrix = [[3, "9"], [12, 3]]
+>>> print(matrix_divided(matrix, 2))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/adesina/Documents/alx-software_engineering/daadesina1/alx-higher_level_programming/0x07-python-test_driven_development/2-matrix_divided.py", line 27, in matrix_divided
+    raise TypeError('matrix must be a matrix '
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix = [[3, 9], [12, 3]]
+>>> print(matrix_divided(matrix, "2"))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/adesina/Documents/alx-software_engineering/daadesina1/alx-higher_level_programming/0x07-python-test_driven_development/2-matrix_divided.py", line 19, in matrix_divided
+    raise TypeError('div must be a number')
+TypeError: div must be a number
+>>> print(matrix_divided(matrix, 0))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/adesina/Documents/alx-software_engineering/daadesina1/alx-higher_level_programming/0x07-python-test_driven_development/2-matrix_divided.py", line 22, in matrix_divided
+    raise ZeroDivisionError('division by zero')
+ZeroDivisionError: division by zero
+>>> print(matrix_divided(matrix))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+>>> print(matrix_divided())
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+>>> print(matrix_divided(matrix, float('inf')))
+[[0.0, 0.0], [0.0, 0.0]]
