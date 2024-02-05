@@ -23,8 +23,8 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.__height = height
 
-        super().integer_validator("width", width)
-        super().integer_validator("height", height)
+        super().integer_validator("width", self.__width)
+        super().integer_validator("height", self.__height)
 
     def area(self):
         return (self.__width * self.__height)
@@ -39,4 +39,4 @@ class Square(Rectangle):
     def __init__(self, size):
         self.__size = size
 
-        super().__init__(size, size)
+        super().__init__(self.__size, self.__size)
