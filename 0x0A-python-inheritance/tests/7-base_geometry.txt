@@ -20,3 +20,10 @@ Traceback (most recent call last):
   File "/home/adesina/Documents/alx-software_engineering/ab702810/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 16, in integer_validator
     raise ValueError(f'{name} must be greater than 0')
 ValueError: distance must be greater than 0
+
+
+>>> bg.integer_validator("distance")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+
