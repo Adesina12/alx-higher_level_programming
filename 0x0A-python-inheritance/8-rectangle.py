@@ -14,3 +14,14 @@ class BaseGeometry:
 
         if value <= 0:
             raise ValueError(f'{name} must be greater than 0')
+
+
+class Rectangle(BaseGeometry):
+    '''A child class'''
+
+    def __init__(self, width, height):
+        self.__width = width
+        self.__height = height
+
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
