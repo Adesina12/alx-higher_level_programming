@@ -18,8 +18,8 @@ class Student:
             return (self.__dict__)
 
         for i in attrs:
-            value = self.__dict__.get(attr)
+            value = self.__dict__.get(i)
             if value is not None:
-                result[attr] = value
+                result[i] = value
 
         return result
