@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-'''Select States'''
+"""Select States"""
+
 import mysql.connector
 from mysql.connector import Error
 import sys
 import MySQLdb
 
 try:
+    """Try this"""
     connection = mysql.connector.connect(
             user=sys.argv[1],
             host='localhost',
@@ -21,8 +23,10 @@ try:
             print(num)
 
 except Error as e:
+    """except this"""
     print("The Error is ", e)
 finally:
+    """Finally this"""
     if connection.is_connected():
         cursor.close()
         connection.close()
