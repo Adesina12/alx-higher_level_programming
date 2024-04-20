@@ -1,12 +1,5 @@
 #!/usr/bin/python3
 '''Select States'''
-# 1. import
-# 2. connect
-# 3. cursor
-# 4. execute
-# 5. fectchall
-# 6. close
-
 import mysql.connector
 from mysql.connector import Error
 import sys
