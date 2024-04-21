@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-"""Select States"""
+"""python3 -c 'print(__import__("my_module").__doc__)'"""
 
 import mysql.connector
 from mysql.connector import Error
 import sys
 import MySQLdb
+"""python3 -c 'print(__import__("my_module").__doc__)'"""
 
 try:
-    """Try this"""
+    """python3 -c 'print(__import__("my_module").__doc__)'"""
     connection = mysql.connector.connect(
             user=sys.argv[1],
             host='localhost',
@@ -23,10 +24,10 @@ try:
             print(num)
 
 except Error as e:
-    """except this"""
+    """python3 -c 'print(__import__("my_module").__doc__)'"""
     print("The Error is ", e)
 finally:
-    """Finally this"""
+    """python3 -c 'print(__import__("my_module").__doc__)'"""
     if connection.is_connected():
         cursor.close()
         connection.close()
