@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """SelectStates"""
 import MySQLdb
-import mysql.connector
 import sys
 
 
@@ -12,7 +11,7 @@ def select_states():
     password = sys.argv[2]
     database = sys.argv[3]
 
-    db = mysql.connector.connect(host='localhost',
+    db = MySQLdb.connect(host='localhost',
                          port=3306,
                          user=username,
                          passwd=password,
