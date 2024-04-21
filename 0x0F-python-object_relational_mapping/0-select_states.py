@@ -4,7 +4,6 @@
 import mysql.connector
 from mysql.connector import Error
 import sys
-import MySQLdb
 """python3 -c 'print(__import__("my_module").__doc__)'"""
 
 connection = mysql.connector.connect(
