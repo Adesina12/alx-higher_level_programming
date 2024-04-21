@@ -1,30 +1,28 @@
 #!/usr/bin/python3
-"""SelectStates"""
+"""python3 -c 'print(__import__("my_module").__doc__)'"""
+
 import MySQLdb
 import sys
 
+def my_func():
+    """python3 -c 'print(__import__("my_module").__doc__)'"""
+    connection = MySQLdb.connect(
+            user=sys.argv[1],
+            host='localhost',
+            passwd=sys.argv[2],
+            db=sys.argv[3],
+            port=3306,
+            )
+    if connection.is_connected():
+        cursor = connection.cursor()
+        cursor.execute('SELECT * FROM states;')
+        record = (cursor.fetchall())
+        for num in record:
+            print(num)
 
-def select_states():
-    """Gets states from database"""
+    if connection.is_connected():
+        cursor.close()
+        connection.close()
 
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
-
-    db = MySQLdb.connect(host='localhost',
-                         port=3306,
-                         user=username,
-                         passwd=password,
-                         db=database
-                         )
-    cur = db.cursor()
-    cur.execute('SELECT * FROM states ORDER BY id ASC')
-    rows = cur.fetchall()
-    for row in rows:
-        print(row)
-    cur.close()
-    db.close()
-
-
-if __name__ == "__main__":
-    select_states()
+if __name__=="__main__":
+    my_func()
