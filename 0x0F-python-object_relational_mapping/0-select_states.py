@@ -3,9 +3,8 @@
 
 import MySQLdb
 import sys
-"""python3 -c 'print(__import__("my_module").__doc__)'"""
 
-def my_func()
+def my_func():
     """python3 -c 'print(__import__("my_module").__doc__)'"""
     connection = MySQLdb.connect(
             user=sys.argv[1],
