@@ -2,14 +2,12 @@
 """python3 -c 'print(__import__("my_module").__doc__)'"""
 
 import MySQLdb
-import mysql.connector
-from mysql.connector import Error
 import sys
 """python3 -c 'print(__import__("my_module").__doc__)'"""
 
 def my_func()
     """python3 -c 'print(__import__("my_module").__doc__)'"""
-    connection = mysql.connector.connect(
+    connection = MySQLdb.connect(
             user=sys.argv[1],
             host='localhost',
             password=sys.argv[2],
