@@ -7,27 +7,20 @@ import sys
 import MySQLdb
 """python3 -c 'print(__import__("my_module").__doc__)'"""
 
-try:
-    """python3 -c 'print(__import__("my_module").__doc__)'"""
-    connection = mysql.connector.connect(
-            user=sys.argv[1],
-            host='localhost',
-            password=sys.argv[2],
-            database=sys.argv[3],
-            port=3306,
-            )
-    if connection.is_connected():
-        cursor = connection.cursor()
-        cursor.execute('SELECT * FROM states;')
-        record = (cursor.fetchall())
-        for num in record:
-            print(num)
+connection = mysql.connector.connect(
+        user=sys.argv[1],
+        host='localhost',
+        password=sys.argv[2],
+        database=sys.argv[3],
+        port=3306,
+        )
+if connection.is_connected():
+    cursor = connection.cursor()
+    cursor.execute('SELECT * FROM states;')
+    record = (cursor.fetchall())
+    for num in record:
+        print(num)
 
-except Error as e:
-    """python3 -c 'print(__import__("my_module").__doc__)'"""
-    print("The Error is ", e)
-finally:
-    """python3 -c 'print(__import__("my_module").__doc__)'"""
-    if connection.is_connected():
-        cursor.close()
-        connection.close()
+if connection.is_connected():
+    cursor.close()
+    connection.close()
